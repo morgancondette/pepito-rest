@@ -1,0 +1,14 @@
+{
+  "name": "pepito-rest",
+  "version": "1.0.0",
+  "description": "REST API using Restify",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/morgancondette/pepito-rest.git"
+  },
+  "author": "Morgan Condette <morgan.condette@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "restify": "^5.2.0"
+  }
+}
