@@ -1,4 +1,5 @@
 exports.SERVER_OPTIONS = {
+    name: "pepito-rest",
     strictRouting: true,
 };
 
