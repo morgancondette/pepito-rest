@@ -29,5 +29,4 @@ export const CONFIG: IConfig = {
   },
   MONGODB_URI: "",
   SERVER_PORT: 8888
-}
-
+};

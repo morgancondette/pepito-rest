@@ -7,7 +7,8 @@
     "url": "https://github.com/morgancondette/pepito-rest.git"
   },
   "scripts": {
-    "start:dev": "tsc && node build/server.js"
+    "start:dev": "npm run lint && tsc && node build/server.js",
+    "lint": "tslint \"src/**/*.ts\""
   },
   "author": "Morgan Condette <morgan.condette@gmail.com>",
   "license": "ISC",
@@ -22,6 +23,9 @@
   "devDependencies": {
     "@types/mongoose": "^4.7.21",
     "@types/restify-plugins": "^1.5.8",
+    "tslint": "^5.7.0",
+    "tslint-eslint-rules": "^4.1.1",
+    "tslint-microsoft-contrib": "^5.0.1",
     "typescript": "^2.5.2"
   }
 }
