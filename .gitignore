@@ -24,4 +24,7 @@ logs
 npm-debug.log*
 
 # Project
-config.js
+src/config.ts
+
+# Build
+build

@@ -1,3 +1,8 @@
+// Place your settings in this file to overwrite default and user settings.
 {
-    "typescript.tsdk": "./node_modules/typescript/lib"
+  "typescript.tsdk": "./node_modules/typescript/lib",
+  "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  "javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  "editor.formatOnSave": true,
+  "tslint.autoFixOnSave": true
 }

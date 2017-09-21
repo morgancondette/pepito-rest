@@ -6,6 +6,9 @@
     "type": "git",
     "url": "https://github.com/morgancondette/pepito-rest.git"
   },
+  "scripts": {
+    "start:dev": "tsc && node build/server.js"
+  },
   "author": "Morgan Condette <morgan.condette@gmail.com>",
   "license": "ISC",
   "dependencies": {
@@ -15,5 +18,10 @@
     "restify": "^5.2.0",
     "restify-errors": "^5.0.0",
     "restify-plugins": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/mongoose": "^4.7.21",
+    "@types/restify-plugins": "^1.5.8",
+    "typescript": "^2.5.2"
   }
 }

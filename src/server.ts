@@ -1,7 +1,8 @@
-const CONFIG = require('./config');
-const restify = require('restify');
-const mongoose = require('mongoose');
-const restifyPlugins = require('restify-plugins');
+import * as restify from "restify";
+import * as mongoose from "mongoose";
+import * as restifyPlugins from "restify-plugins";
+
+import { CONFIG } from "./config";
 
 // Server initialisation
 const server = restify.createServer(CONFIG.SERVER_OPTIONS);
@@ -15,19 +16,19 @@ server.use(restifyPlugins.fullResponse());
 // Server startup
 server.listen(CONFIG.SERVER_PORT, () => {
   // establish connection to mongodb
-	mongoose.Promise = global.Promise;
+  (<any>mongoose).Promise = global.Promise;
   mongoose.connect(CONFIG.MONGODB_URI, CONFIG.MONGODB_OPTIONS);
 
-	const database = mongoose.connection;
+  const database = mongoose.connection;
 
-	database.on('error', (err) => {
-	    console.error(err);
-	    process.exit(1);
-	});
+  database.on('error', (err) => {
+    console.error(err);
+    process.exit(1);
+  });
 
   database.once('open', () => {
-      console.log("Database connection successful on %s", CONFIG.MONGODB_URI)
-	    //require('./routes')(server);
-      console.log(`Server is listening on port %s`, CONFIG.SERVER_PORT);
-	});
+    console.log("Database connection successful on %s", CONFIG.MONGODB_URI)
+    //require('./routes')(server);
+    console.log(`Server is listening on port %s`, CONFIG.SERVER_PORT);
+  });
 });
