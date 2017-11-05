@@ -8,24 +8,25 @@
   },
   "scripts": {
     "start:dev": "npm run lint && tsc && node build/server.js",
-    "lint": "tslint \"src/**/*.ts\""
+    "lint": "tslint \"src/**/*.ts\"",
+    "update-lib": "npm-check-updates -u"
   },
   "author": "Morgan Condette <morgan.condette@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "mongoose": "^4.11.9",
+    "mongoose": "^4.13.0",
     "mongoose-string-query": "^0.2.5",
     "mongoose-timestamp": "^0.6.0",
-    "restify": "^5.2.0",
+    "restify": "^6.3.1",
     "restify-errors": "^5.0.0",
     "restify-plugins": "^1.6.0"
   },
   "devDependencies": {
-    "@types/mongoose": "^4.7.21",
-    "@types/restify-plugins": "^1.5.8",
-    "tslint": "^5.7.0",
+    "@types/mongoose": "^4.7.25",
+    "@types/restify-plugins": "^1.5.10",
+    "tslint": "^5.8.0",
     "tslint-eslint-rules": "^4.1.1",
     "tslint-microsoft-contrib": "^5.0.1",
-    "typescript": "^2.5.2"
+    "typescript": "^2.6.1"
   }
 }
